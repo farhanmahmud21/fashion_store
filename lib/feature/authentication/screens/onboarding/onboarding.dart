@@ -1,4 +1,6 @@
 import 'package:fashion_store/feature/authentication/controllers/onboardingController.dart';
+import 'package:fashion_store/feature/authentication/screens/onboarding/widgets/dotNavigation.dart';
+import 'package:fashion_store/feature/authentication/screens/onboarding/widgets/onBoardingNextButton.dart';
 import 'package:fashion_store/feature/authentication/screens/onboarding/widgets/onbordingPage.dart';
 import 'package:fashion_store/utils/constrains/images.dart';
 import 'package:flutter/material.dart';
@@ -42,40 +44,26 @@ class OnboardingScreen extends StatelessWidget {
             bottom: 200, // Remove conflicting top value
             left: 160, // Center horizontally
             right: 150,
-            child: SmoothPageIndicator(
-              effect: ExpandingDotsEffect(),
-              controller: controller.pageController,
-              onDotClicked: controller.changedot,
-              count: 3,
-            ),
+            child: DotNavigation(controller: controller),
           ),
 
           Positioned(
             bottom: 10,
             right: 10,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.deepOrange,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                foregroundColor: Colors.white,
-              ),
-
-              onPressed: () {
-                controller.nextButton(controller.currentIndex.value);
-              },
-              child: Text('Next'),
-            ),
+            child: onBoardingNextButton(controller: controller),
           ),
 
           Positioned(
             bottom: 10,
-            child: TextButton(
-              onPressed: () {
-                controller.skip();
-              },
-              child: Text('Skip'),
+            child: Obx(
+              () => TextButton(
+                onPressed: () {
+                  controller.skip();
+                },
+                child: controller.currentIndex.value == 2
+                    ? SizedBox()
+                    : Text('Skip'),
+              ),
             ),
           ),
         ],

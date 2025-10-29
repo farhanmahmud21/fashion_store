@@ -1,3 +1,4 @@
+import 'package:fashion_store/feature/authentication/screens/Login/loginScreen.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
@@ -16,6 +17,10 @@ class Onboardingcontroller extends GetxController {
   }
 
   void nextButton(index) {
+    if (currentIndex.value == 2) {
+      currentIndex.value = index;
+      Get.to(LoginScreen());
+    }
     if (currentIndex.value < 2) {
       currentIndex.value++;
       pageController.jumpToPage(currentIndex.value);
