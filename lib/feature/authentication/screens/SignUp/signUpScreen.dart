@@ -1,9 +1,9 @@
-import 'package:fashion_store/feature/authentication/screens/Login/widget/formWidget.dart';
-import 'package:fashion_store/feature/authentication/screens/Login/widget/signupWidget.dart';
+import 'package:fashion_store/feature/authentication/screens/SignUp/widget/signinTextWidget.dart';
+import 'package:fashion_store/feature/authentication/screens/SignUp/widget/signupFormWidget.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class Signupscreen extends StatelessWidget {
+  const Signupscreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,17 +16,19 @@ class LoginScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Welcome Back!',
+                'Create Account!',
                 style: Theme.of(context).textTheme.headlineLarge,
               ),
               Text(
-                'Sign in to continue shopping',
+                'Sign up to get started',
                 style: Theme.of(context).textTheme.labelLarge,
               ),
               SizedBox(height: 30),
-              formWidget(),
-              SizedBox(height: 10),
-              signupTextWidget(),
+
+              SignupFormWidget(),
+
+              SizedBox(height: 30),
+              SigninTextWidget(),
             ],
           ),
         ),

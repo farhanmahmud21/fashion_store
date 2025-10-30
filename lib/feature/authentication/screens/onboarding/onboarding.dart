@@ -5,7 +5,6 @@ import 'package:fashion_store/feature/authentication/screens/onboarding/widgets/
 import 'package:fashion_store/utils/constrains/images.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});

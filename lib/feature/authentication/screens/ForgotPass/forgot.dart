@@ -16,11 +16,11 @@ class ForgotScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Welcome Back!',
+              'Reset Password',
               style: Theme.of(context).textTheme.headlineLarge,
             ),
             Text(
-              'Sign in to continue shopping',
+              'Enter your email to reset your password',
               style: Theme.of(context).textTheme.labelLarge,
             ),
             SizedBox(height: 30),
@@ -34,12 +34,17 @@ class ForgotScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadiusGeometry.circular(10),
                   ),
-                  foregroundColor: Colors.white,
+
                   backgroundColor: Colors.deepOrangeAccent,
                 ),
 
                 onPressed: () {},
-                child: Text('Sent Reset Link'),
+                child: Text(
+                  'Sent Reset Link',
+                  style: Theme.of(
+                    context,
+                  ).textTheme.bodyLarge!.copyWith(color: Colors.white),
+                ),
               ),
             ),
           ],
