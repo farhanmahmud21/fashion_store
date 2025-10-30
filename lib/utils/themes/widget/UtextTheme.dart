@@ -17,11 +17,11 @@ class UTextTheme {
       fontWeight: FontWeight.w600,
     ),
     titleLarge: const TextStyle().copyWith(
-      fontSize: 16.0,
+      fontSize: 20.0,
       fontWeight: FontWeight.w600,
     ),
     titleMedium: const TextStyle().copyWith(
-      fontSize: 16.0,
+      fontSize: 18.0,
       fontWeight: FontWeight.w500,
     ),
     titleSmall: const TextStyle().copyWith(
@@ -63,11 +63,11 @@ class UTextTheme {
       fontWeight: FontWeight.w600,
     ),
     titleLarge: const TextStyle().copyWith(
-      fontSize: 16.0,
+      fontSize: 20.0,
       fontWeight: FontWeight.w600,
     ),
     titleMedium: const TextStyle().copyWith(
-      fontSize: 16.0,
+      fontSize: 18.0,
       fontWeight: FontWeight.w500,
     ),
     titleSmall: const TextStyle().copyWith(

@@ -40,7 +40,7 @@ class OnboardingScreen extends StatelessWidget {
             ],
           ),
           Positioned(
-            bottom: 200, // Remove conflicting top value
+            bottom: 150, // Remove conflicting top value
             left: 160, // Center horizontally
             right: 150,
             child: DotNavigation(controller: controller),

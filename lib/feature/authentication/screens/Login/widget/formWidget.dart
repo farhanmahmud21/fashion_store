@@ -1,5 +1,6 @@
 import 'package:fashion_store/common/widget/textFeild/formText.dart';
 import 'package:fashion_store/feature/authentication/screens/ForgotPass/forgot.dart';
+import 'package:fashion_store/feature/shop/home/home.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -41,7 +42,9 @@ class formWidget extends StatelessWidget {
               backgroundColor: Colors.deepOrangeAccent,
             ),
 
-            onPressed: () {},
+            onPressed: () {
+              Get.to(HomeScreen());
+            },
             child: Text('Sign In'),
           ),
         ),
