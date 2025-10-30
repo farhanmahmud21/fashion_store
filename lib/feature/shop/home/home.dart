@@ -1,5 +1,5 @@
 import 'package:fashion_store/common/widget/textFeild/formText.dart';
-import 'package:fashion_store/navigationBar.dart';
+
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.deepOrangeAccent.withValues(alpha: 0.2),
         leading: Padding(
           padding: const EdgeInsets.only(left: 8),
           child: CircleAvatar(),
@@ -36,7 +37,6 @@ class HomeScreen extends StatelessWidget {
           IconButton(onPressed: () {}, icon: Icon(Icons.dark_mode)),
         ],
       ),
-      bottomNavigationBar: bottomNavigtionBar.navBar,
 
       body: Padding(
         padding: const EdgeInsets.only(
